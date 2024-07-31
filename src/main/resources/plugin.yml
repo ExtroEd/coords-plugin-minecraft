@@ -1,10 +1,10 @@
 name: CoordsPlugin
-version: '${project.version}'
+version: '${version}'
 main: me.coordsplugin.CoordsPlugin
 commands:
   coords:
     description: Get player coordinates
     usage: /coords <playername>
-api-version: '1.20'
+api-version: '1.21'
 authors: [Ciocolata47]
 description: Simple plugin that allows get the coordinates of another player.

@@ -42,12 +42,28 @@ public class CoordsPlugin extends JavaPlugin implements CommandExecutor {
             double x = target.getLocation().getX();
             double y = target.getLocation().getY();
             double z = target.getLocation().getZ();
+            String dimension = target.getWorld().getName();
 
+            String displayDimension;
+            switch (dimension) {
+                case "world":
+                    displayDimension = "Overworld";
+                    break;
+                case "world_nether":
+                    displayDimension = "Nether";
+                    break;
+                case "world_the_end":
+                    displayDimension = "The End";
+                    break;
+                default:
+                    displayDimension = dimension;
+            }
 
             sender.sendMessage("Coordinates of " + target.getName() + ":");
             sender.sendMessage("X = " + x);
             sender.sendMessage("Y = " + y);
             sender.sendMessage("Z = " + z);
+            sender.sendMessage("World = " + displayDimension);
             return true;
         }
 
